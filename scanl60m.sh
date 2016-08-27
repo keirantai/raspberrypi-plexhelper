@@ -8,7 +8,7 @@ if [ "$SRCDIR" == "" ]; then
 	exit 1;
 fi
 
-find "$SRCDIR" -name "*.mkv" -o -name "*.avi" -type f | 
+find "$SRCDIR" -name "*.mkv" -o -name "*.avi" -type f -mmin -60 | 
 while read filename
 do
 	file=$(basename "$filename")
