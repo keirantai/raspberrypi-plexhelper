@@ -9,3 +9,7 @@ This project includes few automation scripts to help to converting video files f
 # MKV to MP4
 
 `mkv2mp4.sh` is used to convert MKV video file to Plex compatible MP4
+
+# Scan and convert
+
+`scanconvert.sh` is used to scan all `*.avi` and `*.mkv` files in a folder and subfolders recursively, then convert them to MP4 video.
