@@ -13,3 +13,7 @@ This project includes few automation scripts to help to converting video files f
 # Scan and convert
 
 `scanconvert.sh` is used to scan all `*.avi` and `*.mkv` files in a folder and subfolders recursively, then convert them to MP4 video.
+
+# Reference
+
+Some scripts are referenced from Reddit post: [https://www.reddit.com/r/PleX/comments/46njns/automatically_convert_files_for_direct_streaming/]
