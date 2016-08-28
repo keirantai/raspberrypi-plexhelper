@@ -15,6 +15,15 @@ do
 	fname="${file%.*}"
 	ext="${file##*.}"
 
+	# find next file if MP4 file exists
+	if [ -f "${fname}.mp4" ] then
+		echo "Skipped. MP4 file already exists:"
+		echo "${fname}.mp4"
+		echo "keep scanning..."
+		echo ""
+		continue
+	fi
+
 	case "$ext" in
 		avi)
 			$DIR/avi2mp4.sh $file
