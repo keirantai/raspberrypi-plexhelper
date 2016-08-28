@@ -7,7 +7,7 @@ if [ "$2" != "" ]; then
 	OUTPUT="$2"
 fi
 
-ffmpeg -i "$INPUT" -metadata title="" \
+ffmpeg -i "$INPUT" -metadata title="" -loglevel panic \
 #Generate a mssing PTS file from AVI.
 -fflags +genpts \
 #Stream mapping:

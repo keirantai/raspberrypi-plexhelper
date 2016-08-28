@@ -7,4 +7,4 @@ if [ "$2" != "" ]; then
 	OUTPUT="$2"
 fi
 
-ffmpeg -i "$INPUT" -metadata title="" -c:v copy -c:a libfdk_aac -ac 2 -movflags +faststart "$OUTPUT"
+ffmpeg -loglevel panic -i "$INPUT" -metadata title="" -c:v copy -c:a libfdk_aac -ac 2 -movflags +faststart "$OUTPUT"
