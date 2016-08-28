@@ -7,6 +7,8 @@ if [ "$2" != "" ]; then
 	OUTPUT="$2"
 fi
 
+START=$(date +%s)
+
 ffmpeg -hide_banner -loglevel panic -i "$INPUT" -metadata title="" \
 #Generate a mssing PTS file from AVI.
 -fflags +genpts \
@@ -27,3 +29,8 @@ ffmpeg -hide_banner -loglevel panic -i "$INPUT" -metadata title="" \
 -movflags +faststart \
 # Uses the same name as input, minus the Suffix
 "$OUTPUT"
+
+END=$(date +%s)
+FILENAME=$(basename "$INPUT")
+
+echo "File ($FILENAME) took $((END - START)) second(s) to convert."
