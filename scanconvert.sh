@@ -16,7 +16,7 @@ do
 	ext="${file##*.}"
 
 	# find next file if MP4 file exists
-	if [ -f "${fname}.mp4" ] then
+	if [ -f "${fname}.mp4" ]; then
 		echo "Skipped. MP4 file already exists:"
 		echo "${fname}.mp4"
 		echo "keep scanning..."
